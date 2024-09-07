@@ -89,25 +89,24 @@ extension UIView {
    
     if let textField {
       imageView.centerY(inView: view)
-      imageView.anchor(left: view.leftAnchor, paddingLeft: 8, paddingRight: 8, width: 24, height: 24)
-
+      imageView.anchor(left: view.leftAnchor, paddingRight: 8, width: 24, height: 24)
       view.addSubview(textField)
       textField.centerY(inView: view)
       textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, paddingBottom: 8)
     }
 
     if let segmentedCotroller {
-      imageView.anchor(top: view.topAnchor, left: view.leftAnchor, paddingTop: -8, paddingLeft: 8, width: 24, height: 24)
+      imageView.anchor(top: view.topAnchor, left: view.leftAnchor, paddingTop: -8, width: 24, height: 24)
 
       view.addSubview(segmentedCotroller)
-      segmentedCotroller.anchor(left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 8, paddingRight: 8)
+      segmentedCotroller.anchor(left: view.leftAnchor, right: view.rightAnchor)
       segmentedCotroller.centerY(inView: view, constant: 8)
     }
 
     let separatorView = UIView()
     separatorView.backgroundColor = .lightGray
     view.addSubview(separatorView)
-    separatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
+    separatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, height: 0.75)
 
     return view
   }

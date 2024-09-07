@@ -77,7 +77,7 @@ class SignUpController: UIViewController {
                                                accountTypeContainerView])
     view.addSubview(stack)
     stack.axis = .vertical
-    stack.distribution = .fillProportionally
+    stack.distribution = .fill
     stack.spacing = 24
     stack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingLeft: 16, paddingRight: 16)
   }
