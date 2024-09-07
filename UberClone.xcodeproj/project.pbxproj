@@ -13,6 +13,8 @@
 		EFF3A59A2C789CE000CEEDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFF3A5992C789CE000CEEDC5 /* Assets.xcassets */; };
 		EFF3A59D2C789CE000CEEDC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EFF3A59C2C789CE000CEEDC5 /* Base */; };
 		EFF3A5AB2C789D5100CEEDC5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3A5AA2C789D5100CEEDC5 /* LoginController.swift */; };
+		EFF3A5AD2C899B3700CEEDC5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3A5AC2C899B3700CEEDC5 /* Extensions.swift */; };
+		EFF3A5AF2C8C246D00CEEDC5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3A5AE2C8C246D00CEEDC5 /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EFF3A59C2C789CE000CEEDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFF3A59E2C789CE000CEEDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFF3A5AA2C789D5100CEEDC5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		EFF3A5AC2C899B3700CEEDC5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EFF3A5AE2C8C246D00CEEDC5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		EFF3A5A42C789D0600CEEDC5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EFF3A5AC2C899B3700CEEDC5 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF3A5AA2C789D5100CEEDC5 /* LoginController.swift */,
+				EFF3A5AE2C8C246D00CEEDC5 /* SignUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF3A5AF2C8C246D00CEEDC5 /* SignUpController.swift in Sources */,
 				EFF3A5912C789CDF00CEEDC5 /* AppDelegate.swift in Sources */,
 				EFF3A5AB2C789D5100CEEDC5 /* LoginController.swift in Sources */,
 				EFF3A5932C789CDF00CEEDC5 /* SceneDelegate.swift in Sources */,
+				EFF3A5AD2C899B3700CEEDC5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
