@@ -60,8 +60,34 @@ class SignUpController: UIViewController {
     return sc
   }()
 
+  private let signUpButton: AuthButton = {
+    let button = AuthButton(type: .system)
+    button.setTitle("Sign Up", for: .normal)
+    button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+    return button
+  }()
+
+  private let alreadyHaveAccountButton: UIButton = {
+    let button = UIButton(type: .system)
+    let attributedTitle = NSMutableAttributedString(string: "Already have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+
+    attributedTitle.append(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlue]))
+
+    button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+    button.setAttributedTitle(attributedTitle, for: .normal)
+    return button
+  }()
+
   override func viewDidLoad() {
     configureUI()
+  }
+
+  @objc func handleSignUp() {
+
+  }
+
+  @objc func handleShowLogin() {
+    navigationController?.popViewController(animated: true)
   }
 
   private func configureUI() {
@@ -74,15 +100,16 @@ class SignUpController: UIViewController {
     let stack = UIStackView(arrangedSubviews: [emailContainerView, 
                                                nameContainerView,
                                                passwordContainerView,
-                                               accountTypeContainerView])
+                                               accountTypeContainerView,
+                                               signUpButton])
     view.addSubview(stack)
     stack.axis = .vertical
     stack.distribution = .fill
     stack.spacing = 24
     stack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingLeft: 16, paddingRight: 16)
+
+    view.addSubview(alreadyHaveAccountButton)
+    alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
+    alreadyHaveAccountButton.centerX(inView: view)
   }
 }
-
-//segmentedControl
-//auth botton
-//already sign -> show login
